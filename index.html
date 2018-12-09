@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>Route</title>
-    <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0 maximum-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/leaflet.css">
@@ -19,7 +19,7 @@
       <div class="leaflet-map-pane" style="transform: translate3d(0px, -125px, 0px);">
         <div class="leaflet-tile-pane">
           <div class="leaflet-layer" style="z-index: 1;">
-          <div class="leaflet-tile-container leaflet-zoom-animated" style=""></div>
+          <div class="leaflet-tile-container"></div>
           <div class="leaflet-tile-container leaflet-zoom-animated" style="">
             <img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; transform: translate3d(775px, 170px, 0px);
                                                                  " src="https://api.mapbox.com/v4/mapbox.streets/15/9371/12534@2x.png?access_token=pk.eyJ1IjoibXNsZWUiLCJhIjoiclpiTWV5SSJ9.P_h8r37vD8jpIH1A6i1VRg">
@@ -95,12 +95,14 @@
                                                                  " src="https://api.mapbox.com/v4/mapbox.streets/15/9375/12536@2x.png?access_token=pk.eyJ1IjoibXNsZWUiLCJhIjoiclpiTWV5SSJ9.P_h8r37vD8jpIH1A6i1VRg">
             </div>
           </div>
+        </div>
           <div class="leaflet-objects-pane">
             <div class="leaflet-shadow-pane"></div>
             <div class="leaflet-overlay-pane"></div>
             <div class="leaflet-marker-pane"></div>
             <div class="leaflet-popup-pane"></div>
           </div>
+      </div>
           <div class="leaflet-control-container">
             <div class="leaflet-top leaflet-left">
               <div class="leaflet-control-zoom leaflet-bar leaflet-control">
@@ -188,7 +190,7 @@
               </div>
             </div>
           </div>
-         
+    </div>
     <script src="bundle.js"></script>
   </body>
 </html>
