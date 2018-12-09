@@ -1,27 +1,9 @@
-var map = L.map( 'map', {
-    center: [20.0, 5.0],
-    minZoom: 2,
-    zoom: 2
-});
-	
-L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    subdomains: ['a','b','c']
-}).addTo( map );
+var map = L.map('map').setView([51.505, -0.09], 13);
 
-var myURL = jQuery( 'script[src$="leaf-demo.js"]' ).attr( 'src' ).replace( 'leaf-demo.js', '' )
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-var myIcon = L.icon({
-  iconUrl: myURL + 'pin24.png',
-  iconRetinaUrl: myURL + 'pin24.png',
-  iconSize: [29, 24],
-  iconAnchor: [9, 21],
-  popupAnchor: [0, -14]
-})
-
-for ( var i=0; i < markers.length; ++i ) 
-{
-   L.marker( [markers[i].lat, markers[i].lng] )
-      .bindPopup( '<a href="' + markers[i].url + '" target="_blank">' + markers[i].name + '</a>' )
-      .addTo( map );
-}
+L.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    .openPopup();
